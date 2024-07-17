@@ -1,4 +1,7 @@
-import SalesChart from "../../components/Analytics/SalesChart";
+// import SalesChart from "../../components/Analytics/SalesChart";
+// import SalesChart from "@/components/Analytics/SalesChart";
+
+import SalesChart from "@/components/Analytics/SalesChart";
 import React from "react";
 
 const ComponentFour = () => {
@@ -8,7 +11,9 @@ const ComponentFour = () => {
         <p className="text-xl font-semibold">Customers by device</p>
       </div>
       <div className="-ml-4">
-        <div className="w-full">{/* <SalesChart /> */}</div>
+        <div className="w-full">
+          <SalesChart />
+        </div>
       </div>
     </div>
   );
