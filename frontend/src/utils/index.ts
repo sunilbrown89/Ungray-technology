@@ -30,8 +30,8 @@ export const MuiTblOptions = () => {
 };
 
 export const BASE_URL =
-  // process.env.NEXT_PUBLIC_BASE_URL ||
   "http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1";
+// process.env.NEXT_PUBLIC_BASE_URL ||
 
 //? SET To LocalStorage
 export const saveToLocalStorage = (key: string, value: string) => {
