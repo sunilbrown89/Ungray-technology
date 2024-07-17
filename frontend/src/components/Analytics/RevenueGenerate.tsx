@@ -1,5 +1,4 @@
 import { ICONS } from "@/assets";
-import React from "react";
 import RevenueLineChart from "./RevenueLineChart";
 
 interface CardData {
@@ -13,19 +12,19 @@ const Revenuecardsdata: CardData[] = [
     id: "1",
     title: "Total Revenue ",
     revenue: "$ 9K",
-    icon: <ICONS.advertiser />,
+    icon: <ICONS.Facebook />,
   },
   {
     id: "2",
     title: "Monthly Revenue",
     revenue: "$ 40K",
-    icon: <ICONS.promoter />,
+    icon: <ICONS.Facebook />,
   },
   {
     id: "3",
     title: " Weekly Revenue",
     revenue: "$ 1200k",
-    icon: <ICONS.dollor />,
+    icon: <ICONS.Facebook />,
   },
 ];
 const months: string[] = [
