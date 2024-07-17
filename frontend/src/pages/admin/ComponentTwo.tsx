@@ -1,5 +1,5 @@
+import ComparisonYearGraph from "@/components/Analytics/ComparisonYearGraph";
 import React from "react";
-import ComparisonYearGraph from "../../Analytics/ComparisonYearGraph";
 
 const ComponentTwo = () => {
   return (

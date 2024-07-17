@@ -1,4 +1,3 @@
-// components/SalesChart.tsx
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 

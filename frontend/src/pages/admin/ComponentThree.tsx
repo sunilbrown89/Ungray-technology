@@ -1,6 +1,6 @@
+import CicularGuage from "@/components/Analytics/CicularGuage";
 import { useSwr } from "@/hooks";
 import React from "react";
-import CicularGuage from "../../Analytics/CicularGuage";
 
 const ComponentThree = () => {
   const { data: component3 } = useSwr(`sample_assignment_api_3/`);
