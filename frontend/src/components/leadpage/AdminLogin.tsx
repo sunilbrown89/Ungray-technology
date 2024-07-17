@@ -81,7 +81,7 @@ export default function AdminLogin() {
                           <div className="text-sm">{inputItem.label}</div>
                           <div className="col-span-6 w-full">
                             <InputField
-                              key={inputItem?.key}
+                              // key={inputItem?.key}
                               placeholder={inputItem.placeholder}
                               id={inputItem?.key}
                               name={inputItem?.name}

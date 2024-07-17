@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { AdminLayout } from "@/layouts";
-import ComponentTwo from "@/components/admin/dashboard-components/ComponentTwo";
-import ComponentSix from "@/components/admin/dashboard-components/ComponentSix";
-import ComponentThree from "@/components/admin/dashboard-components/ComponentThree";
-import ComponentFive from "@/components/admin/dashboard-components/ComponentFive";
-import ComponentFour from "@/components/admin/dashboard-components/ComponentFour";
-import { ComponentOne } from "@/components/admin";
+import {
+  ComponentFive,
+  ComponentFour,
+  ComponentOne,
+  ComponentSix,
+  ComponentThree,
+  ComponentTwo,
+} from "@/components";
+// import ComponentOne from "@/components/admin/dashboard-components/ComponentOne";
 
 export default function Admin() {
   return (
