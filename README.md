@@ -8,5 +8,17 @@ backend deploy link: https://ungray-technology.onrender.com/
 <br>
 <br>
 [Video presentation of Ungray-technolgies assignment](https://drive.google.com/file/d/1kkrUnaJ5MEMfrghhLQ5decozmaKn1L4u/view?usp=sharing)
-https://github.com/sunilbrown89/Ungray-technology/blob/main/images/loginpage.png
-![Project Logo](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/loginpage.png)
+<br>
+**Login Page**
+![Login Page](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/loginpage.png)
+**Dashboard**
+![Dashboard](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/dashboard.png)
+**Dashboard Components**
+![Dashboard Components](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/dasboard-components.png)
+**Sidebar**
+![Sidebar](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/sidebar.png)
+**Sidebar Menu Page**
+![Sidebar menu page](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/sidebar%20menu%20page.png)
+**Responsive**
+![Responsive](https://github.com/sunilbrown89/Ungray-technology/blob/main/images/responsive.png)
+
