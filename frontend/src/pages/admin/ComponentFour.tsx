@@ -4,7 +4,7 @@ import React from "react";
 
 const ComponentFour = () => {
   const { data: component4, isValidating: component4IsValidating } = useSwr(
-    `http://localhost:8080/customerSells`
+    `https://ungray-technology.onrender.com/customerSells`
   );
   // console.log("component4", component4?.data?.customerSellData);
   const dynamicData = component4?.data?.customerSellData;

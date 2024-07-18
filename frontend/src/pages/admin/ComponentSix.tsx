@@ -11,7 +11,7 @@ interface TopProductsTypes {
 }
 const ComponentSix = () => {
   const { data: component2, isValidating: component2IsValidating } = useSwr(
-    `http://localhost:8080/topProducts`
+    `https://ungray-technology.onrender.com/topProducts`
   );
   // console.log("component2", component2?.data?.topProductData);
   const topProductData = component2?.data?.topProductData;

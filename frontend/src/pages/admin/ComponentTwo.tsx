@@ -4,7 +4,7 @@ import React from "react";
 
 const ComponentTwo = () => {
   const { data: component2, isValidating: component2IsValidating } = useSwr(
-    `http://localhost:8080/comparisons`
+    `https://ungray-technology.onrender.com/comparisons`
   );
   // console.log("component2", component2?.data?.comparisonYearDatas);
   const series = component2?.data?.comparisonYearData;
