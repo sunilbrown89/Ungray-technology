@@ -21,48 +21,48 @@ export default function AdminLogin() {
 
   const handleLogin = async (values: loginValueType, props: formikProps) => {
     //comments line are worked but due to given ungray-techmology-api issues login is not working so that after go to admin panel another 3 given api's are not working
-    // try {
-    //   const res = await mutation(`login`, {
-    //     method: "POST",
-    //     body: {
-    //       username: values.userId,
-    //       password: values.password,
-    //       email: "ungray@gmail.com",
-    //       phone_number: 8908033814,
-    //       input_code: 0,
-    //     },
-    //     isAlert: true,
-    //   });
-    //   if (
-    //     res?.status === 200 &&
-    //     res?.results?.message === "Successfully Logged in"
-    //   ) {
-    //     props.resetForm();
-    //     notify.success(`${res?.results?.message}`);
-    //     push(`/admin`);
-    //   } else {
-    //     notify.error(`${res?.results?.message}`);
-    //   }
-    // } catch (error: unknown) {
-    //   errorHelper(error);
-    // }
     try {
-      if (values.userId === "trial" && values.password === "assignment123") {
+      const res = await mutation(`login`, {
+        method: "POST",
+        body: {
+          username: values.userId,
+          password: values.password,
+          email: "ungray@gmail.com",
+          phone_number: 8908033814,
+          input_code: 0,
+        },
+        isAlert: true,
+      });
+      if (
+        res?.status === 200 &&
+        res?.results?.message === "Successfully Logged in"
+      ) {
         props.resetForm();
-        notify.success("Successfully Logged in");
+        notify.success(`${res?.results?.message}`);
         push(`/admin`);
       } else {
-        if (values.userId !== "trial" && values.password !== "assignment123") {
-          notify.error("Username and Password are not valid");
-        } else if (values.userId !== "trial") {
-          notify.error("Username is not matched");
-        } else {
-          notify.error("Password is not matched");
-        }
+        notify.error(`${res?.results?.message}`);
       }
     } catch (error: unknown) {
       errorHelper(error);
     }
+    // try {
+    //   if (values.userId === "trial" && values.password === "assignment123") {
+    //     props.resetForm();
+    //     notify.success("Successfully Logged in");
+    //     push(`/admin`);
+    //   } else {
+    //     if (values.userId !== "trial" && values.password !== "assignment123") {
+    //       notify.error("Username and Password are not valid");
+    //     } else if (values.userId !== "trial") {
+    //       notify.error("Username is not matched");
+    //     } else {
+    //       notify.error("Password is not matched");
+    //     }
+    //   }
+    // } catch (error: unknown) {
+    //   errorHelper(error);
+    // }
   };
 
   return (
