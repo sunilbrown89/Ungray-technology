@@ -6,7 +6,7 @@ const ComponentOne = () => {
   const { data: component1, isValidating: component1IsValidating } = useSwr(
     `http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/sample_assignment_api_1/`
   );
-  console.log("component1", component1);
+  // console.log("component1", component1);
   return (
     <div className="bg-white  p-6 ">
       <div className="flex flex-col xl:flex-row gap-y-4 justify-between">
