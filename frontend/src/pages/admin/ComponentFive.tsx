@@ -4,7 +4,7 @@ import { useSwr } from "@/hooks";
 
 const ComponentFive = () => {
   const { data: component5, isValidating: component5IsValidating } = useSwr(
-    `sample_assignment_api_5/`
+    `http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/sample_assignment_api_5/`
   );
   const NegativeData = component5?.data?.negative;
   const NeutralData = component5?.data?.neutral;

@@ -12,7 +12,7 @@ const Admin = () => {
     <AdminLayout title="Dashboard">
       <section className="main-container w-full ">
         <article className="flex flex-col xl:flex-row gap-4 ">
-          <div className="bg-white rounded-lg p-6 flex flex-col gap-y-8  xl:w-[70%]">
+          <div className="bg-white rounded-lg p-6 flex flex-col gap-y-3  xl:w-[70%]">
             <ComponentOne />
             <ComponentTwo />
             <ComponentSix />

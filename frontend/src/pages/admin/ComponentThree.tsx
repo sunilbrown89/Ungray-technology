@@ -3,7 +3,9 @@ import { useSwr } from "@/hooks";
 import React from "react";
 
 const ComponentThree = () => {
-  const { data: component3 } = useSwr(`sample_assignment_api_3/`);
+  const { data: component3 } = useSwr(
+    `http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/sample_assignment_api_3/`
+  );
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col gap-3 items-center">
       <div className=" flex flex-col items-center">

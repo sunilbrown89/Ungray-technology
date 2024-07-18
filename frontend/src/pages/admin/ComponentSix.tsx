@@ -1,50 +1,22 @@
+import { useSwr } from "@/hooks";
 import React from "react";
 
+interface TopProductsTypes {
+  id: number;
+  product_name: string;
+  sold_amount: string;
+  unit_price: string;
+  rating: string;
+  revenue: string;
+}
 const ComponentSix = () => {
-  interface TopProductsTypes {
-    id: number;
-    product: string;
-    soldAmount: string;
-    unitPrice: string;
-    rating: string;
-    revenue: string;
-  }
-  const topProducts: TopProductsTypes[] = [
-    {
-      id: 1,
-      product: "Camera Mi 36",
-      soldAmount: "432",
-      unitPrice: "$120",
-      rating: "4.81",
-      revenue: "$51,320",
-    },
-    {
-      id: 2,
-      product: "Message Gun",
-      soldAmount: "120",
-      unitPrice: "$60",
-      rating: "3.44",
-      revenue: "$23,901",
-    },
-    {
-      id: 3,
-      product: "Redmi Note 9",
-      soldAmount: "190",
-      unitPrice: "$87.6",
-      rating: "2.5",
-      revenue: "$87,211",
-    },
-    {
-      id: 3,
-      product: "Oneplus Nord",
-      soldAmount: "140",
-      unitPrice: "$24.1",
-      rating: "4.65",
-      revenue: "$29,809",
-    },
-  ];
+  const { data: component2, isValidating: component2IsValidating } = useSwr(
+    `http://localhost:8080/topProducts`
+  );
+  // console.log("component2", component2?.data?.topProductData);
+  const topProductData = component2?.data?.topProductData;
   return (
-    <div className="bg-white  p-6">
+    <div className="bg-white  p-6 ">
       <div className="flex justify-between ">
         <h3 className="text-xl font-semibold">Top Products</h3>
         <div className="rounded-2xl border px-3 py-2">
@@ -71,21 +43,21 @@ const ComponentSix = () => {
         </div>
         <hr className="text-gray-300 " />
         <div className=" pt-6 pb-3 flex flex-col w-[700px] overflow-y-auto gap-y-9">
-          {topProducts.map((item: TopProductsTypes) => (
+          {topProductData?.map((item: TopProductsTypes) => (
             <div key={item?.id} className="grid grid-cols-12   ">
               <div className="col-span-4 font-semibold">
                 <span className="p-3 rounded-md bg-gray-200">
                   {" "}
-                  {item?.product[0]}
+                  {item?.product_name[0]}
                 </span>{" "}
                 &nbsp;
-                {item?.product}
+                {item?.product_name}
               </div>
               <div className="col-span-2 font-medium text-gray-500">
-                {item?.soldAmount}
+                {item?.sold_amount}
               </div>
               <div className="col-span-2 font-medium text-gray-500">
-                {item?.unitPrice}
+                {item?.unit_price}
               </div>
               <div className="col-span-2 font-medium text-gray-500">
                 {item?.revenue}

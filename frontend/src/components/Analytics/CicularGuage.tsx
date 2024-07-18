@@ -5,7 +5,7 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 interface CircularGaugeProps {
   series: any;
 }
-const CicularGuage = ({ series }: CircularGaugeProps) => {
+const CicularGuage: React.FC<CircularGaugeProps> = ({ series }) => {
   const options: any = {
     chart: {
       height: 120,

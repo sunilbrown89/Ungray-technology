@@ -6,29 +6,25 @@ import { ApexOptions } from "apexcharts";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 interface MonthlyGraphProps {
-  id: string;
+  _id: string;
   month: string;
-  thisYear: number;
-  lastYear: number;
+  this_year: number;
+  last_year: number;
 }
 
-// Sample data
-const data: MonthlyGraphProps[] = [
-  { id: "1", month: "Jan", thisYear: 6000, lastYear: 5000 },
-  { id: "2", month: "Feb", thisYear: 2000, lastYear: 10000 },
-  { id: "3", month: "Mar", thisYear: 4000, lastYear: 20000 },
-  { id: "4", month: "Apr", thisYear: 21000, lastYear: 32000 },
-  { id: "5", month: "May", thisYear: 9200, lastYear: 12000 },
-  { id: "6", month: "Jun", thisYear: 8700, lastYear: 13000 },
-];
+interface ComparisonYearGraphProps {
+  series: MonthlyGraphProps[];
+}
 
-const ComparisonYearGraph: React.FC = () => {
+const ComparisonYearGraph: React.FC<ComparisonYearGraphProps> = ({
+  series,
+}: any) => {
   const options: ApexOptions = {
     chart: {
       type: "bar",
     },
     xaxis: {
-      categories: data.map((item) => item.month),
+      categories: series?.map((item: MonthlyGraphProps) => item.month),
       labels: {
         show: true, // Show x-axis labels
         style: {
@@ -64,11 +60,11 @@ const ComparisonYearGraph: React.FC = () => {
     series: [
       {
         name: "Last Year",
-        data: data.map((item) => item.lastYear),
+        data: series?.map((item: MonthlyGraphProps) => item.last_year),
       },
       {
         name: "This Year",
-        data: data.map((item) => item.thisYear),
+        data: series?.map((item: MonthlyGraphProps) => item.this_year),
       },
     ],
   };
@@ -79,7 +75,7 @@ const ComparisonYearGraph: React.FC = () => {
         options={options}
         series={options.series}
         type="bar"
-        height={280}
+        height={310}
       />
     </div>
   );

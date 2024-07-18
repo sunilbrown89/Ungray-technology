@@ -26,11 +26,14 @@ interface SalesData {
   webSellings: number[];
   offlineSellings: number[];
 }
-
-const SalesChart: React.FC = () => {
+interface Props {
+  dynamicData: any;
+}
+const SalesChart: React.FC<Props> = ({ dynamicData }) => {
+  // console.log("dynamicData---->", dynamicData);
   const data: SalesData = {
-    webSellings: [200, 6000, 4000, 5000, 6000, 200],
-    offlineSellings: [2000, 3000, 4000, 8000, 2000, 3000],
+    webSellings: dynamicData?.map((item: any) => item?.web_sales) || [],
+    offlineSellings: dynamicData?.map((item: any) => item?.offline_sales) || [],
   };
 
   const options: any = {
@@ -39,7 +42,7 @@ const SalesChart: React.FC = () => {
     scales: {
       x: {
         type: "category",
-        labels: ["1/2024", "2/2024", "3/2024", "4/2024", "5/2024", "6/2024"],
+        labels: dynamicData?.map((item: any) => item?.date) || [],
       },
       y: {
         beginAtZero: true,
@@ -70,7 +73,7 @@ const SalesChart: React.FC = () => {
   };
 
   const chartData = {
-    labels: ["1/2024", "2/2024", "3/2024", "4/2024", "5/2024", "6/2024"],
+    labels: dynamicData?.map((item: any) => item?.date) || [],
     datasets: [
       {
         label: "Web Sellings",
