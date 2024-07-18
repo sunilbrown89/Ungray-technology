@@ -6,6 +6,7 @@ const ComponentFive = () => {
   const { data: component5, isValidating: component5IsValidating } = useSwr(
     `http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/sample_assignment_api_5/`
   );
+  //due to api issues i hardcoded in or operator value
   const NegativeData = component5?.data?.negative || 67;
   const NeutralData = component5?.data?.neutral || 10;
   const PositiveData = component5?.data?.positive || 13;
