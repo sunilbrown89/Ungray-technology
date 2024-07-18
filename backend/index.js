@@ -19,7 +19,7 @@ app.use("/comparisons", comparisonYearController);
 app.use("/topProducts", topProductController);
 app.use("/customerSells", customerSellController);
 
-app.listen(process.env.PORT || 8080, async () => {
+app.listen(8080, async () => {
   try {
     await connection;
     console.log("Connected to db");
@@ -27,5 +27,5 @@ app.listen(process.env.PORT || 8080, async () => {
     console.log("Error connnecting to DB");
     console.log(err);
   }
-  console.log(`listening on PORT : ${process.env.PORT || 8080}`);
+  console.log(`listening on PORT: 8080`);
 });
