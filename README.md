@@ -1,5 +1,6 @@
 # Ungray-technology
-**Given API is not working, so i make a video presentation for this assignment, I ran both frontend & backend on local server to ran this project**
+**Given API is not working, so i make a video presentation for this assignment, I ran both frontend & backend on local server to ran this project.**
+**Below is my video presentation link**
 <br>
 video link:- https://drive.google.com/file/d/1kkrUnaJ5MEMfrghhLQ5decozmaKn1L4u/view?usp=sharing
 <br>
@@ -7,7 +8,6 @@ video link:- https://drive.google.com/file/d/1kkrUnaJ5MEMfrghhLQ5decozmaKn1L4u/v
 frontend deploy link: https://ungray-technology123.vercel.app/
 <br>
 backend deploy link: https://ungray-technology.onrender.com/
-<br>
 <br>
 [Video presentation of Ungray-technolgies assignment](https://drive.google.com/file/d/1kkrUnaJ5MEMfrghhLQ5decozmaKn1L4u/view?usp=sharing)
 <br>
