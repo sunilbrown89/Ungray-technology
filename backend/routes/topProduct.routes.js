@@ -6,7 +6,7 @@ topProductController.get("/", async (req, res) => {
   try {
     const topProductData = await TopProductModel.find();
     res.json({ topProductData });
-    // console.log("topProductData", topProductData);
+    // console.log("topProductData", topProductDatas);
   } catch (err) {
     res.status(500).send("Failed to fetch Top product datas");
   }
