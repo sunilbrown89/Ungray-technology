@@ -6,7 +6,7 @@ const ComponentOne = () => {
     `http://ec2-3-83-254-115.compute-1.amazonaws.com:8020/api/v1/sample_assignment_api_1/`
   );
 
-  //due to api issues i hardcoded in or operator value
+  //due to api issues i hardcoded in or operator valuesss
   const purchases = component1?.data?.purchases || 4934;
   const revenue = component1?.data?.revenue || 322000;
   const refunds = component1?.data?.refunds || 8200;
